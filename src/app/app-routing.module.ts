@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TokenGuard } from './guards/token.guard';
+import { TeamComponent } from './pages/team/team.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 
 const routes: Routes = [
@@ -13,6 +14,10 @@ const routes: Routes = [
     path: "",
     pathMatch: "full",
     redirectTo: "welcome"
+  },
+  {
+    path: "team",
+    component: TeamComponent
   }
 ];
 

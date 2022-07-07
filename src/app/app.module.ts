@@ -13,6 +13,7 @@ import { IndexComponent } from './admin/index/index.component';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TeamComponent } from './pages/team/team.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FooterComponent } from './components/footer/footer.component';
     IndexComponent,
     NoimagePipe,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
