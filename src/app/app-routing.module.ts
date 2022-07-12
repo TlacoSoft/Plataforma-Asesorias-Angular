@@ -22,8 +22,8 @@ const routes: Routes = [
     component: TeamComponent
   }, 
   {
-    component: ContactComponent
     path: "contact",
+    component: ContactComponent
   },
   {
     path: "registro",
