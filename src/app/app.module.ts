@@ -14,6 +14,7 @@ import { NoimagePipe } from './pipes/noimage.pipe';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TeamComponent } from './pages/team/team.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TeamComponent } from './pages/team/team.component';
     NoimagePipe,
     HeaderComponent,
     FooterComponent,
-    TeamComponent
+    TeamComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
