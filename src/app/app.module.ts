@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TeamComponent } from './pages/team/team.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { RequestAComponent } from './client/request-a/request-a.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     FooterComponent,
     TeamComponent,
     ContactComponent,
+    RequestAComponent,
   ],
   imports: [
     BrowserModule,
