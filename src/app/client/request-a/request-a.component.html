@@ -1,0 +1,74 @@
+<app-header></app-header>
+<div class="page-login">
+
+    <main id="main">
+  
+        <!-- ======= Breadcrumbs ======= -->
+        <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/team-header.jpg');">
+          <div class="container position-relative d-flex flex-column align-items-center">
+    
+            <h2>Asesorias</h2>
+            <ol>
+              <li><a href="index.html">Inicio</a></li>
+             <!--  <li>Asesorias</li> -->
+            </ol>
+    
+          </div>
+        </div><!-- End Breadcrumbs -->
+    </main>
+   
+     <!-- Formulario -->
+     <div class="row mt-5">
+        <div class="col-6 offset-3">
+          <div class="card">
+            <div class="card-body">
+                <br>
+              <h5 class="card-title text-center">Nueva Asesorias</h5>
+              <br>
+              <form action="">
+                <div class="row">
+                  <!-- 1 columna -->
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label for="tema" class="form-label">Tema:</label>
+                      <input type="text" class="form-control" id="tema" placeholder="tema">
+                    </div>
+                    <div class="mb-3">
+                      <label for="alumno" class="form-label">Alumno:</label>
+                      <input type="text" class="form-control" id="alumno" placeholder="nombre del alumno">
+                    </div>
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Hora:</label>
+                      <input type="time" class="form-control">
+                    </div>
+                  </div>
+                  <!-- 2 columna -->
+                  <div class="col-6">
+                    <div class="mb-3">
+                        <label for="encargado" class="form-label">Encargado:</label>
+                        <input type="text" class="form-control" id="encargado" placeholder="nombre del encargado del tema">
+                    </div>
+                    <div class="mb-3">
+                      <label for="edad" class="form-label">Fecha:</label>
+                      <input type="date" class="form-control" id="fecha">
+                    </div>
+                    <div class="mb-3">
+                        <label for="modalidad" class="form-label">Modalidad:</label>
+                        <select class="form-select" id="modalidad" aria-label="Default select example">
+                          <option selected>Selecciona una opción</option>
+                          <option value="hombre">Presencial</option>
+                          <option value="mujer">En línea</option>
+                        </select>
+                      </div>
+                  </div>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <app-footer></app-footer>
+
