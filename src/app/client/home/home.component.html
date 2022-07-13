@@ -1,1 +1,64 @@
-<p>home works!</p>
+<app-header></app-header>
+    <main id="main">
+
+        <!-- ======= Directorios ======= -->
+        <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/register-header.jpg');">
+        <div class="container position-relative d-flex flex-column align-items-center">
+
+            <h2>Inicio</h2>
+            <!-- <ol>
+            <li><a href="/welcome">Inicio</a></li>
+            <li>Registro</li>
+            </ol> -->
+
+        </div>
+        </div><!-- Final de directorios -->
+    </main>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem; padding: 10px;">
+                    <img src="/assets/img/requestA.svg" class="card-img-top" alt="..." width="266" height="157">
+                    <div class="card-body">
+                      <h5 class="card-title">Solicitar asesorías</h5>
+                      <p class="card-text">En esta sección rellenarás el formulario para solicitar una asesoría</p>
+                      <a [routerLink]="['request-a']" class="btn btn-primary">Solicitar asesoría</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem; padding: 10px;">
+                    <img src="assets/img/viewA.svg" class="card-img-top" alt="..." width="266" height="157">
+                    <div class="card-body">
+                      <h5 class="card-title">Mis asesorías</h5>
+                      <p class="card-text">En este apartado puedes revisar las asesorías que has solicitado y ver su estatus</p>
+                      <a href="#" class="btn btn-primary">Ver asesorías</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem; padding: 10px;">
+                    <img src="assets/img/time.svg" class="card-img-top" alt="..." width="266" height="157">
+                    <div class="card-body">
+                      <h5 class="card-title">Horarios</h5>
+                      <p class="card-text">En esta sección puedes revisar los horarios disponibles de los profesores</p>
+                      <a href="#" class="btn btn-primary">Ver horarios</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-4">
+              <div class="card" style="width: 18rem; padding: 10px;">
+                  <img src="/assets/img/requestA.svg" class="card-img-top" alt="..." width="266" height="157">
+                  <div class="card-body">
+                    <h5 class="card-title">Nivel educativo</h5>
+                    <p class="card-text">En esta sección puedes encontrar los temas disponibles por nivel educativo</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                  </div>
+                </div>
+          </div>
+        </div>
+    </div>
+<app-footer></app-footer>

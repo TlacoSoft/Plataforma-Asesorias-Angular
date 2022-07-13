@@ -6,6 +6,7 @@ import { RegistroComponent } from './pages/registro/registro.component';
 import { LoginComponent } from './pages/login/login.component';
 import { TeamComponent } from './pages/team/team.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
+import { HomeComponent } from './client/home/home.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,11 @@ const routes: Routes = [
     path: "login",
     component: LoginComponent
   },
+  {
+    path: "home",
+    component: HomeComponent,
+    canActivate: [TokenGuard]
+  }
 ];
 
 @NgModule({
