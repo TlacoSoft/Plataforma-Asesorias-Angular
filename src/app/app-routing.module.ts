@@ -6,11 +6,9 @@ import { RegistroComponent } from './pages/registro/registro.component';
 import { LoginComponent } from './pages/login/login.component';
 import { TeamComponent } from './pages/team/team.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
-<<<<<<< HEAD
 import { HomeComponent } from './client/home/home.component';
-=======
 import { RequestAComponent } from './client/request-a/request-a.component';
->>>>>>> origin/requesta
+import { MisasesoriasComponent } from './client/misasesorias/misasesorias.component';
 
 const routes: Routes = [
   {
@@ -39,16 +37,18 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-<<<<<<< HEAD
     path: "home",
     component: HomeComponent,
     canActivate: [TokenGuard]
-  }
-=======
+  },
+{
     path: "request-a",
     component: RequestAComponent
   },
->>>>>>> origin/requesta
+  {
+    path: "misasesorias",
+    component: MisasesoriasComponent
+  },
 ];
 
 @NgModule({
