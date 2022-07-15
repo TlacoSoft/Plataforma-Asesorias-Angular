@@ -17,7 +17,7 @@ import { TeamComponent } from './pages/team/team.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { RequestAComponent } from './client/request-a/request-a.component';
-import { HorariosComponent } from './client/horarios/horarios.component';
+import { MisasesoriasComponent } from './client/misasesorias/misasesorias.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { HorariosComponent } from './client/horarios/horarios.component';
     TeamComponent,
     ContactComponent,
     RequestAComponent,
-    HorariosComponent,
+    MisasesoriasComponent,
   ],
   imports: [
     BrowserModule,

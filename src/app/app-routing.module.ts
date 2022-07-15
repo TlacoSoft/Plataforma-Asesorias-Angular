@@ -8,7 +8,7 @@ import { TeamComponent } from './pages/team/team.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { HomeComponent } from './client/home/home.component';
 import { RequestAComponent } from './client/request-a/request-a.component';
-import { HorariosComponent } from './client/horarios/horarios.component';
+import { MisasesoriasComponent } from './client/misasesorias/misasesorias.component';
 
 const routes: Routes = [
   {
@@ -41,14 +41,14 @@ const routes: Routes = [
     component: HomeComponent,
     canActivate: [TokenGuard]
   },
-  {
+{
     path: "request-a",
     component: RequestAComponent
   },
   {
-    path: "horarios",
-    component: HorariosComponent
-  }
+    path: "misasesorias",
+    component: MisasesoriasComponent
+  },
 ];
 
 @NgModule({
