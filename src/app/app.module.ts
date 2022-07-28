@@ -18,6 +18,10 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { RequestAComponent } from './client/request-a/request-a.component';
 import { MisasesoriasComponent } from './client/misasesorias/misasesorias.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
+
 
 @NgModule({
   declarations: [
@@ -39,9 +43,13 @@ import { MisasesoriasComponent } from './client/misasesorias/misasesorias.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
+    CookieService,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
