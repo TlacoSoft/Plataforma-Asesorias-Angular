@@ -44,7 +44,7 @@ const routes: Routes = [
 {
     path: "request-a",
     component: RequestAComponent,
-    canActivate: [TokenGuard]
+
   },
   {
     path: "misasesorias",

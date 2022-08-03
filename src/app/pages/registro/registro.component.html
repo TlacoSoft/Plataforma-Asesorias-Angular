@@ -21,61 +21,131 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title text-center">Registrate</h5>
-            <form action="">
+            <form autocomplete="off" [formGroup]="miFormulario">
               <div class="row">
                 <!-- Primera columna -->
                 <div class="col-6">
                   <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+                    <label for="nombre" 
+                    class="form-label">Nombre:</label>
+                    <input type="text" 
+                    formControlName="nombre"
+                    class="form-control" 
+                    id="nombre" 
+                    placeholder="Tu nombre">
+                    <span *ngIf="campoValido('nombre')" class="form-text text-danger">
+                      Campo obligatorio</span>
                   </div>
                   <div class="mb-3">
-                    <label for="amaterno" class="form-label">Apellido materno:</label>
-                    <input type="text" class="form-control" id="amaterno" placeholder="Tu segundo apellido">
+                    <label for="apellido_m" 
+                    class="form-label">Apellido materno:</label>
+                    <input type="text" 
+                    formControlName="apellido_m" 
+                    class="form-control" 
+                    id="apellido_m" 
+                    placeholder="Tu segundo apellido">
+                    <span *ngIf="campoValido('apellido_m')" class="form-text text-danger">
+                      Campo obligatorio</span>
                   </div>
                   <div class="mb-3">
-                    <label for="sexo" class="form-label">Sexo:</label>
-                    <select class="form-select" id="sexo" aria-label="Default select example">
+                    <label for="sexo" 
+                    class="form-label">Sexo:</label>
+                    <select class="form-select"  
+                    id="sexo" 
+                    aria-label="Default select example" 
+                    formControlName="sexo">
                       <option selected>Selecciona una opción</option>
                       <option value="hombre">Hombre</option>
                       <option value="mujer">Mujer</option>
                       <option value="none">Prefiero no decirlo</option>
                     </select>
+                    <span *ngIf="campoValido('sexo')" class="form-text text-danger">
+                      Campo obligatorio</span>
                   </div>
                   <div class="mb-3">
-                    <label for="nombre" class="form-label">Contraseña:</label>
-                    <input type="password" class="form-control" id="password" placeholder="Tu nombre">
+                    <label for="nombre" 
+                    class="form-label">Contraseña:</label>
+                    <input type="password"
+                     class="form-control"
+                     formControlName="password"
+                      id="password"
+                      placeholder="Tu nombre">
+                      <span *ngIf="campoValido('password')" class="form-text text-danger">
+                        Tu contraseña debe tener minimo 8 letras o numeros</span>
                   </div>
                   <div class="mb-3">
-                    <label for="telefono" class="form-label">Télefono:</label>
-                    <input type="number" class="form-control" id="telefono" placeholder="Tu télefono">
+                    <label for="telefono" 
+                    class="form-label">Télefono:</label>
+                    <input type="number"  
+                    class="form-control" 
+                    id="telefono" 
+                    formControlName="telefono"
+                    placeholder="Tu télefono">
+                    <span *ngIf="campoValido('telefono')" class="form-text text-danger">
+                      Campo obligatorio</span>
                   </div>
                 </div>
                 <!-- Segunda columna -->
                 <div class="col-6">
                   <div class="mb-3">
-                    <label for="apaterno" class="form-label">Apellido paterno</label>
-                    <input type="text" class="form-control" id="apaterno" placeholder="Tu primer apellido">
+                    <label for="apellido_p" 
+                    class="form-label">Apellido paterno</label>
+                    <input type="text"
+                     class="form-control" 
+                     id="apellido_p" 
+                     formControlName="apellido_p"
+                     placeholder="Tu primer apellido">
+                     <span *ngIf="campoValido('apellido_p')" class="form-text text-danger">
+                      Campo obligatorio</span>
                   </div>
                   <div class="mb-3">
-                    <label for="edad" class="form-label">Edad</label>
-                    <input type="number" class="form-control" id="edad" placeholder="Tu Edad">
+                    <label for="edad" 
+                    class="form-label">Edad</label>
+                    <input type="number" 
+                    class="form-control" 
+                    id="edad" 
+                    formControlName="edad"
+                    placeholder="Tu Edad">
+                    <span *ngIf="campoValido('edad')" class="form-text text-danger">
+                      Campo obligatorio</span>
                   </div>
                   <div class="mb-3">
-                    <label for="correo" class="form-label">Correo:</label>
-                    <input type="email" class="form-control" id="correo" placeholder="Tu correo">
+                    <label for="correo" 
+                    class="form-label">Correo:</label>
+                    <input type="email" 
+                    class="form-control" 
+                    id="correo" 
+                    formControlName="correo"
+                    placeholder="Tu correo">
+                    <span *ngIf="campoValido('correo')" class="form-text text-danger">
+                      Campo obligatorio</span>
                   </div>
                   <div class="mb-3">
-                    <label for="cpassword" class="form-label">Repetir contraseña:</label>
-                    <input type="text" class="form-control" id="cpassword" placeholder="Repite tu contraseña">
+                    <label for="conpassword" 
+                    class="form-label">Repetir contraseña:</label>
+                    <input type="password" 
+                    ngModel class="form-control" 
+                    id="conpassword" 
+                    formControlName="conpassword"
+                    placeholder="Repite tu contraseña">
+                    <span *ngIf="campoValido('conpassword')" class="form-text text-danger">
+                      Campo obligatorio</span>
                   </div>
                   <div class="mb-3">
-                    <label for="img" class="form-label">Imagen:</label>
-                    <input type="file" accept="png, jpg" class="form-control" id="img">
+                    <label for="imagen" 
+                    class="form-label">Imagen:</label>
+                    <input type="file" 
+                    accept="png, jpg" 
+                    formControlName="imagen"
+                    class="form-control" 
+                    id="imagen">
                   </div>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary">Registrarse</button>
+              <button *ngIf="!id" type="submit" class="btn btn-primary"
+              (click)="save()">
+              Registrarse
+            </button>
             </form>
           </div>
         </div>
