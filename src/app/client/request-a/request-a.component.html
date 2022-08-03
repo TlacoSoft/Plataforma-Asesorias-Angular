@@ -25,45 +25,85 @@
                 <br>
               <h5 class="card-title text-center">Nueva Asesorias</h5>
               <br>
-              <form action="">
+              <form autocomplete="off" [formGroup]="myFormulario">
                 <div class="row">
                   <!-- 1 columna -->
                   <div class="col-6">
                     <div class="mb-3">
-                      <label for="tema" class="form-label">Tema:</label>
-                      <input type="text" class="form-control" id="tema" placeholder="tema">
+                      <label for="tema"
+                       class="form-label">Tema:</label>
+                      <input type="text"
+                      formControlName="tema"
+                       class="form-control" 
+                       id="tema" 
+                       placeholder="tema">
+                       <span *ngIf="campoValido('tema')" class="form-text text-danger">
+                        Campo obligatorio</span>
                     </div>
                     <div class="mb-3">
-                      <label for="alumno" class="form-label">Alumno:</label>
-                      <input type="text" class="form-control" id="alumno" placeholder="nombre del alumno">
+                      <label for="alumno" 
+                      class="form-label">Alumno:</label>
+                      <input type="text" 
+                      formControlName="alumno"
+                      class="form-control" 
+                      id="alumno" 
+                      placeholder="nombre del alumno">
+                      <span *ngIf="campoValido('alumno')" class="form-text text-danger">
+                        Campo obligatorio</span>
                     </div>
                     <div class="mb-3">
-                      <label for="nombre" class="form-label">Hora:</label>
-                      <input type="time" class="form-control">
+                      <label for="nombre" 
+                      class="form-label">Hora:</label>
+                      <input type="time"
+                      formControlName="hora"
+                       class="form-control">
+                       <span *ngIf="campoValido('hora')" class="form-text text-danger">
+                        Campo obligatorio</span>
                     </div>
                   </div>
                   <!-- 2 columna -->
                   <div class="col-6">
                     <div class="mb-3">
-                        <label for="encargado" class="form-label">Encargado:</label>
-                        <input type="text" class="form-control" id="encargado" placeholder="nombre del encargado del tema">
+                        <label for="encargado" 
+                        class="form-label">Encargado:</label>
+                        <input type="text" 
+                        formControlName="encargado"
+                        class="form-control" 
+                        id="encargado" 
+                        placeholder="nombre del encargado del tema">
+                        <span *ngIf="campoValido('encargado')" class="form-text text-danger">
+                          Campo obligatorio</span>
                     </div>
                     <div class="mb-3">
-                      <label for="edad" class="form-label">Fecha:</label>
-                      <input type="date" class="form-control" id="fecha">
+                      <label for="edad" 
+                      class="form-label">Fecha:</label>
+                      <input type="date"
+                      formControlName="fecha" 
+                      class="form-control" 
+                      id="fecha">
+                      <span *ngIf="campoValido('fecha')" class="form-text text-danger">
+                        Campo obligatorio</span>
                     </div>
                     <div class="mb-3">
-                        <label for="modalidad" class="form-label">Modalidad:</label>
-                        <select class="form-select" id="modalidad" aria-label="Default select example">
+                        <label for="modalidad" 
+                        class="form-label">Modalidad:</label>
+                        <select class="form-select"
+                        formControlName="modalidad"
+                         id="modalidad" 
+                         aria-label="Default select example">
                           <option selected>Selecciona una opción</option>
                           <option value="hombre">Presencial</option>
                           <option value="mujer">En línea</option>
                         </select>
+                        <span *ngIf="campoValido('modalidad')" class="form-text text-danger">
+                          Campo obligatorio</span>
                       </div>
                   </div>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button *ngIf="!id" type="submit" class="btn btn-primary"
+                (click)="save()">
+                Guardar</button>
               </form>
             </div>
           </div>
@@ -71,4 +111,3 @@
       </div>
   </div>
   <app-footer></app-footer>
-

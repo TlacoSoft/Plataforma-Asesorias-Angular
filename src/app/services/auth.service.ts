@@ -7,8 +7,16 @@ import { HttpClient } from '@angular/common/http';
 export class AuthService {
 
   constructor( private http: HttpClient ) { }
+  URL = 'https://asesoriasnode.azurewebsites.net/users';
+
 
   login(body: any) {
     return this.http.post('https://asesoriasnode.azurewebsites.net/users/login', body);
+  }
+  requesta(form:any){
+    return this.http.post('',form);
+  }
+  create(form: any){
+    return this.http.post(`${this.URL}/create`,form);
   }
 }
