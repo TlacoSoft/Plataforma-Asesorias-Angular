@@ -21,6 +21,7 @@ import { MisasesoriasComponent } from './client/misasesorias/misasesorias.compon
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
+import { HorariosComponent } from './client/horarios/horarios.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { CookieService } from 'ngx-cookie-service';
     ContactComponent,
     RequestAComponent,
     MisasesoriasComponent,
+    HorariosComponent
   ],
   imports: [
     BrowserModule,

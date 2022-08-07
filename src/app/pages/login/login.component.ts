@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
         Swal.fire("Usuario o contraseña incorrectos");
         return;
       }
+      this.formLogin.reset();
       this.cookieService.set('token_access', 'fsdfsdfsdf4548', 4, '/')
       this.router.navigate(['/', 'home'])
     })
