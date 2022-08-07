@@ -41,7 +41,7 @@ export class RegistroComponent implements OnInit {
     console.log(this.miFormulario.value);
     this.serviceAu.create(this.miFormulario.value).subscribe((data: any) => {
       console.log(data);
-        this.router.navigate(['registro']);
+        this.router.navigate(['login']);
         this.miFormulario.reset() 
     });
   }

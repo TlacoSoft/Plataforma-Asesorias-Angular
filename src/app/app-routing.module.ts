@@ -9,6 +9,7 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { HomeComponent } from './client/home/home.component';
 import { RequestAComponent } from './client/request-a/request-a.component';
 import { MisasesoriasComponent } from './client/misasesorias/misasesorias.component';
+import { HorariosComponent } from './client/horarios/horarios.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,11 @@ const routes: Routes = [
     component: MisasesoriasComponent,
     canActivate: [TokenGuard]
   },
+  {
+    path: "horarios",
+    component: HorariosComponent,
+    canActivate: [TokenGuard]
+  }
 ];
 
 @NgModule({
