@@ -10,11 +10,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a [routerLink]="['/welcome']" class="active">Inicio</a></li>
-          <li><a [routerLink]="['/team']">Equipo</a></li>
-          <li><a [routerLink]="['/contact']">Contacto</a></li>
-          <li><a [routerLink]="['/registro']">Registrarse</a></li>
-          <li><a [routerLink]="['/login']">Ingresar</a></li>
+          <button class="btn btn-dark" (click)="salir()">Cerrar Sesión</button>
         </ul>
       </nav>
     </div>
