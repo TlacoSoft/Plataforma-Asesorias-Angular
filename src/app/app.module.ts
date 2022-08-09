@@ -42,7 +42,7 @@ import { HorariosComponent } from './client/horarios/horarios.component';
     ContactComponent,
     RequestAComponent,
     MisasesoriasComponent,
-    HorariosComponent
+    HorariosComponent,
     NavbarComponent,
   ],
   imports: [
