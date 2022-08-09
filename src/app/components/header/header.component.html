@@ -1,4 +1,3 @@
-<!-- ======= Header ======= -->
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
@@ -18,11 +17,9 @@
           <li><a [routerLink]="['/home']" *ngIf="isLogin" class="active">Inicio</a></li>
           <li><a [routerLink]="['/team']">Equipo</a></li>
           <li><a [routerLink]="['/contact']">Contacto</a></li>
-          <li><a [routerLink]="['/registro']" *ngIf="!isLogin">Registrarse</a></li>
-          <li><a [routerLink]="['/login']" *ngIf="!isLogin">Ingresar</a></li>
-          <li><a href="#" *ngIf="isLogin">Cerrar sesión</a></li>
+          <li><a [routerLink]="['/registro']">Registrarse</a></li>
+          <li><a [routerLink]="['/login']">Ingresar</a></li>
         </ul>
       </nav>
-
     </div>
-  </header><!-- Termina el Header -->
+</header>
