@@ -18,9 +18,10 @@
           <li><a [routerLink]="['/team']">Equipo</a></li>
           <li><a [routerLink]="['/contact']">Contacto</a></li>
 
-          <li><a [routerLink]="['/registro']" *ngIf="!isLogin">Registrarse</a></li>
-          <li><a [routerLink]="['/login']"*ngIf="!isLogin">Ingresar</a></li>
           <li><button class="btn btn-danger" style="margin-left: 25px;" (click)="endSession();" *ngIf="isLogin">Cerrar sesión</button></li>
+
+
+      
 
         </ul>
       </nav>
