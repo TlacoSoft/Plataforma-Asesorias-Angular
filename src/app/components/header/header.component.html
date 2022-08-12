@@ -17,8 +17,12 @@
           <li><a [routerLink]="['/home']" *ngIf="isLogin" class="active">Inicio</a></li>
           <li><a [routerLink]="['/team']">Equipo</a></li>
           <li><a [routerLink]="['/contact']">Contacto</a></li>
-          <li><a [routerLink]="['/registro']">Registrarse</a></li>
-          <li><a [routerLink]="['/login']">Ingresar</a></li>
+
+          <li><button class="btn btn-danger" style="margin-left: 25px;" (click)="endSession();" *ngIf="isLogin">Cerrar sesión</button></li>
+
+
+      
+
         </ul>
       </nav>
     </div>

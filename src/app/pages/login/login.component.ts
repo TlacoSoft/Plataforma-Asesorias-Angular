@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
     this.logService.login(this.formLogin.value).subscribe((res:any) => {
       if (res.status === 'User not found') {
         Swal.fire("Usuario o contraseña incorrectos");
+        this.formLogin.reset();
         return;
       }
       this.formLogin.reset();
