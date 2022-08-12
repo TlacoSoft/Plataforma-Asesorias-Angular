@@ -20,7 +20,7 @@
           <li><a [routerLink]="['/contact']">Contacto</a></li>
           <li><a [routerLink]="['/registro']" *ngIf="!isLogin">Registrarse</a></li>
           <li><a [routerLink]="['/login']" *ngIf="!isLogin">Ingresar</a></li>
-          <li><a href="#" *ngIf="isLogin">Cerrar sesión</a></li>
+          <li><button style="outline: none; border: none; background-color:transparent;color:#8f98a2; margin-left: 15px;"  (click)="saludar();" *ngIf="isLogin">Cerrar sesión</button></li>
         </ul>
       </nav>
 
