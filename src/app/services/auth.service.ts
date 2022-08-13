@@ -13,9 +13,7 @@ export class AuthService {
   login(body: any) {
     return this.http.post(`${this.URL}/login`, body);
   }
-  requesta(form:any){
-    return this.http.post('',form);
-  }
+ 
   create(form: any){
     return this.http.post(`${this.URL}/create`,form);
   }
