@@ -41,16 +41,19 @@
                         Campo obligatorio</span>
                     </div>
                     <div class="mb-3">
-                      <label for="alumno" 
+                      <label for="idUsuario" 
                       class="form-label">Alumno:</label>
-                      <input type="text" 
+                      <select class="form-select"
                       formControlName="alumno"
-                      class="form-control" 
-                      id="alumno" 
-                      placeholder="nombre del alumno">
+                       id="idUsuario" 
+                       aria-label="Default select example">
+                       <option selected>Selecciona una opción</option> 
+                       <option value="{{usuarios.idUsuario}}" *ngFor="let usuarios of usuarios"> {{usuarios.nombre}} </option>
+                      </select>
                       <span *ngIf="campoValido('alumno')" class="form-text text-danger">
                         Campo obligatorio</span>
                     </div>
+                   
                     <div class="mb-3">
                       <label for="nombre" 
                       class="form-label">Hora:</label>
@@ -60,20 +63,37 @@
                        <span *ngIf="campoValido('hora')" class="form-text text-danger">
                         Campo obligatorio</span>
                     </div>
+
+                     <div class="mb-3">
+                      <label for="estatus"
+                       class="form-label">Status:</label>
+                      <input type="number"
+                      formControlName="estatus"
+                       class="form-control" 
+                       id="estatus" 
+                       placeholder="Status">
+                       <span *ngIf="campoValido('estatus')" class="form-text text-danger">
+                        Campo obligatorio</span>
+                    </div>
                   </div>
+
+
                   <!-- 2 columna -->
                   <div class="col-6">
                     <div class="mb-3">
-                        <label for="encargado" 
-                        class="form-label">Encargado:</label>
-                        <input type="text" 
-                        formControlName="encargado"
-                        class="form-control" 
-                        id="encargado" 
-                        placeholder="nombre del encargado del tema">
-                        <span *ngIf="campoValido('encargado')" class="form-text text-danger">
-                          Campo obligatorio</span>
+                      <label for="idProfesor" 
+                      class="form-label">Encargado (cedula profesional):</label>
+                      <select class="form-select"
+                      formControlName="encargado"
+                       id="idProfesor" 
+                       aria-label="Default select example">
+                       <option selected>Selecciona una opción</option>
+                       <option value="{{profesores.idProfesor}}" *ngFor="let profesores of profesores">{{profesores.cedula_profesional}} </option>
+                      </select>
+                      <span *ngIf="campoValido('encargado')" class="form-text text-danger">
+                        Campo obligatorio</span>
                     </div>
+
                     <div class="mb-3">
                       <label for="edad" 
                       class="form-label">Fecha:</label>
@@ -92,8 +112,8 @@
                          id="modalidad" 
                          aria-label="Default select example">
                           <option selected>Selecciona una opción</option>
-                          <option value="hombre">Presencial</option>
-                          <option value="mujer">En línea</option>
+                          <option value="presencial">Presencial</option>
+                          <option value="linea">En línea</option>
                         </select>
                         <span *ngIf="campoValido('modalidad')" class="form-text text-danger">
                           Campo obligatorio</span>
@@ -101,8 +121,7 @@
                   </div>
                 </div>
                 <br>
-                <button *ngIf="!id" type="submit" class="btn btn-primary"
-                (click)="save()">
+                <button *ngIf="!id" type="submit" class="btn btn-primary"(click)="guardar()">
                 Guardar</button>
               </form>
             </div>
