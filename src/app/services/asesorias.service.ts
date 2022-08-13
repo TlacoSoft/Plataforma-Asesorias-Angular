@@ -31,6 +31,11 @@ export class AsesoriasService {
   getuser(){
     return this.http.get("https://asesoriasnode.azurewebsites.net/users/get")
   }
+
+  getuserId(id: any){
+    this.id = this.cookieS.get('id');
+    return this.http.get(`https://asesoriasnode.azurewebsites.net/users/${id}`);
+  }
 //agregar una asesoria
   requesta(form: any){
     return this.http.post('https://asesoriasnode.azurewebsites.net/asesorias/create',form);

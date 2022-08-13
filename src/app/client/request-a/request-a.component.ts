@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 import { max } from 'rxjs';
 import { AsesoriasService } from 'src/app/services/asesorias.service';
 
@@ -18,7 +19,7 @@ export class RequestAComponent implements OnInit {
   id:any;
 
   constructor(private serAse:AsesoriasService,private router:Router, private AR:ActivatedRoute,
-    private fb: FormBuilder) { }
+    private fb: FormBuilder, private cookieS: CookieService) { }
 
     myFormulario: FormGroup = this.fb.group({
       tema: ['', [Validators.required, Validators.minLength(4)]],
@@ -27,12 +28,13 @@ export class RequestAComponent implements OnInit {
       encargado: ['', [Validators.required]],
       fecha: ['', [Validators.required]],
       modalidad: ['', [Validators.required]],
-      estatus: ['', [Validators.required]],
+      estatus: ['1', [Validators.required]],
     });
 
   ngOnInit(): void {
     this.getprof();
-    this.getuser();
+    this.id = this.cookieS.get('id');
+    this.getuser(this.id);
     /* console.log(this.usuarios);
     console.log(this.profesores); */
     
@@ -52,10 +54,10 @@ export class RequestAComponent implements OnInit {
     });
   }
 
-  getuser(){
-    this.serAse.getuser().subscribe((data:any)=>{
+  getuser(id: any){
+    this.serAse.getuserId(id).subscribe((data:any)=>{
       console.log(data)
-      this.usuarios = data;
+      this.usuarios = [data];
     });
   }
   
