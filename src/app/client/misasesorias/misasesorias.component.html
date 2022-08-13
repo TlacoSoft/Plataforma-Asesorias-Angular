@@ -29,6 +29,9 @@
             <p class="card-text"><b>Modalidad: </b>{{asesoria.modalidad}}</p>
             <span style="font-size:13pt;" class="badge text-bg-success" *ngIf="asesoria.estatus == 1">ACEPTADA</span>
             <span style="font-size:13pt;" class="badge text-bg-danger" *ngIf="asesoria.estatus == 2">Rechazada</span>
+            <div>
+              <button class="btn btn-danger mt-2" style="width: 100%;" (click)="deleteAsesoria(asesoria.idAsesoria);">Cancelar asesoría</button>
+            </div>
         </div>
       </div>
     </div>
