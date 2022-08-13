@@ -42,7 +42,8 @@ export class LoginComponent implements OnInit {
         return;
       }
       this.formLogin.reset();
-      this.cookieService.set('token_access', 'fsdfsdfsdf4548', 4, '/')
+      this.cookieService.set('token_access', 'fsdfsdfsdf4548', 4, '/');
+      this.cookieService.set('id', res.idUsuario, 4, '/');
       this.router.navigate(['/', 'home'])
     })
    }
